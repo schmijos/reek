@@ -134,6 +134,10 @@ Style/PerlBackrefs:
 Style/SingleLineMethods:
   Enabled: false
 
+# Prefer symbols to look like symbols
+Style/SymbolArray:
+  Enabled: false
+
 # Allow small arrays of words with quotes
 Style/WordArray:
   MinSize: 4
