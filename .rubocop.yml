@@ -8,6 +8,10 @@ AllCops:
     - 'vendor/**/*'
   TargetRubyVersion: 2.1
 
+# This cop has bugs and gives odd results
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
 Lint/HandleExceptions:
   Exclude:
     - 'spec/reek/configuration/configuration_file_finder_spec.rb'
