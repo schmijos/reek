@@ -114,6 +114,11 @@ Style/FrozenStringLiteralComment:
 Style/IndentHeredoc:
   EnforcedStyle: active_support
 
+# TODO: Enable once https://github.com/bbatsov/rubocop/issues/4172 is fixed
+Style/MixinGrouping:
+  Exclude:
+    - 'spec/reek/code_comment_spec.rb'
+
 # Allow multiline block chains
 Style/MultilineBlockChain:
   Enabled: false
@@ -137,6 +142,11 @@ Style/ParallelAssignment:
 # Allow Perl-style references to regex matches
 Style/PerlBackrefs:
   Enabled: false
+
+# TODO: Enable once https://github.com/bbatsov/rubocop/issues/4197 is fixed
+Style/RedundantSelf:
+  Exclude:
+    - 'lib/reek/context_builder.rb'
 
 # Allow single-line method definitions
 Style/SingleLineMethods:
