@@ -41,10 +41,10 @@ module Reek
 
       # :reek:FeatureEnvy
       def unused_params
-        exp.arguments.select do |param|
-          next if param.anonymous_splat?
-          next if param.marked_unused?
-          !uses_param? param.plain_name
+        exp.arguments.reject do |param|
+          param.anonymous_splat? ||
+            param.marked_unused? ||
+            uses_param?(param.plain_name)
         end
       end
 
